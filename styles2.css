@@ -1,0 +1,219 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+  background-color: #303030;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.link {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 35px;
+  text-decoration: none;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 9%;
+  background-color: #b91eca;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  transition: width 0.4s ease;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+.link-now {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 25px;
+  text-decoration: none;
+  transition: background-color 0.4s ease;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.link-now:hover {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 25px;
+  text-decoration: none;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+/* Styles pour le bouton de menu */
+.menu-btn {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: none; /* Initialement caché */
+  margin-right: 20px;
+}
+
+/* Styles pour les liens de navigation lorsque la fenêtre est trop petite */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Affichage du bouton de menu lorsque la fenêtre est trop petite */
+  .menu-btn {
+    display: block;
+  }
+}
+
+.top-contenu {
+  text-align: left;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-contenu .content {
+  flex-grow: 1;
+}
+
+.top-contenu .title {
+  margin-top: -15px;
+  font-size: 16px;
+  color: #b91eca;
+  font-family: "Montserrat", sans-serif;
+}
+
+.top-contenu .subtitle {
+  font-size: 36px;
+  position: relative;
+  font-family: "Heavitas", sans-serif;
+}
+
+.top-contenu .subtitle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+  width: 5px;
+  height: 100%;
+  background-color: #b91eca;
+  border-radius: 5px;
+}
+
+.description p {
+  text-align: left;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+  margin-top: -100px;
+  color: #757575;
+  position: relative;
+}
+
+.learn-more-button {
+  background-color: #393939;
+  color: #b91eca;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.learn-more-button:hover {
+  background-color: #1e1e1e;
+}
+
+.learn-more-button:active {
+  background-color: #131313;
+}
+
+.custom-image {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 400px;
+  height: auto;
+  z-index: -1;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
+}
